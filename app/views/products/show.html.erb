@@ -1,0 +1,47 @@
+<% provide(:title, @product.title) %>
+<% provide(:buttonprice, @product.price.to_s) %>
+<div class="container center">
+	<div class="hero-unit">
+		<h1><%= @product.heading %></h1> 
+		<h2><%= @product.sub_heading %><h2>
+	</div>
+	<!-- Vid Start -->
+    <div class="row-fluid">
+      <div class="flex-video widescreen span10 offset1">
+	      <div><%= raw @product.demo_vid %></div>	
+      </div>
+    </div>
+
+    <!-- Vid end -->
+
+    <%= link_to('#') do %>
+	  <div class="btn btn-large button-action btn-warning ">
+	  	<span>Start this tutorial</span>
+	  	<span class="button-pricing">
+	  		<%= price_on_button(yield(:buttonprice)) %>
+	  	</span>
+	  </div>
+	<% end %>   
+</div>
+<div class="container">
+    <div class="row-fluid">
+		<div class="span8 offset2 benefit_box">
+			<div class="benefit_title center">
+				By the end of this tutorial you will be able to:
+			</div>
+			<div>
+				<%= raw @product.benefits %>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="contents_box">
+	<div class="container">
+		<h3 class="center">Contents</h3>
+		<div class="row-fluid">
+			<div class="span8 offset2 benefit_box">
+
+			</div>
+		</div>
+	</div>
+</div>

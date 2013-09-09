@@ -1,5 +1,8 @@
 Underdogupstart::Application.routes.draw do
+  resources :products
 
+  get "products/new"
+  get "products/show"
   root  'static_pages#home'
 
 
