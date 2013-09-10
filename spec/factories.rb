@@ -9,12 +9,12 @@ FactoryGirl.define do
 		benefits "Lorem ipsum"
 	end
 
-	# factory :section do
-	# 	title "section title"
-	# 	sequence_no "1"
-	# 	video '<iframe width="640" height="360" src="//www.youtube.com/embed/eN8nDVGfdZM" frameborder="0" allowfullscreen></iframe>'
-	# 	notes "Lorem ipsum"
-	# 	description "Lorem ipsum"
-	# 	product
-	# end
+	factory :section do
+		title "section title"
+		sequence_no "1"
+		video '<iframe width="640" height="360" src="//www.youtube.com/embed/eN8nDVGfdZM" frameborder="0" allowfullscreen></iframe>'
+		notes "Lorem ipsum"
+		description "Lorem ipsum"
+		product
+	end
 end

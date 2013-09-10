@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
 
 	def show
 		@product = Product.find(params[:id])
-		# @section = @product.sections.find_by_id(params[:id])
+		@section = @product.sections.find_by_id(params[:id])
 	end
 
 	def edit
