@@ -1,10 +1,11 @@
 Underdogupstart::Application.routes.draw do
-    resources :products do
-      resources :sections
-    end
+  devise_for :users
+  resources :products do
+    resources :sections
+  end
 
 
-  root  'static_pages#home'
+  root to: 'static_pages#home'
 
 
   match '/about',   to: 'static_pages#about',   via: 'get'
