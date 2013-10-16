@@ -1,5 +1,15 @@
 FactoryGirl.define do
 
+	factory :user do
+	    email "example@example.com"
+	    password "foobarbaz"
+	    password_confirmation "foobarbaz"
+
+	    factory :admin do
+	      admin true
+	    end
+	end
+
 	factory :product do
 		sequence(:title) { |n| "Product#{n} dealing with difficult people" }
 		sequence(:heading) { |n| "Heading#{n}"}
@@ -15,6 +25,21 @@ FactoryGirl.define do
 		video '<iframe width="640" height="360" src="//www.youtube.com/embed/eN8nDVGfdZM" frameborder="0" allowfullscreen></iframe>'
 		notes "Lorem ipsum"
 		description "Lorem ipsum"
+		product
+	end
+
+	factory :cart do
+		user
+		# purchused_at 'time.now'
+	end
+
+	factory :line_item do
+		product
+		cart
+	end
+
+	factory :account_item do
+		user
 		product
 	end
 end

@@ -5,6 +5,7 @@ Underdogupstart::Application.routes.draw do
   end
 
 
+
   root to: 'static_pages#home'
 
 
